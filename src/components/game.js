@@ -1,21 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import NavBar from './components/nav-bar';
+import NavBar from './nav-bar';
 
-export default function Game(props) {
-	const links = [{
-		text: 'What?',
-		href: '#'
-	}, {
-		text: '+New Game',
-		href: '#'
-	}];
+export default class Game extends React.Component {
+	constructor(props) {
+		super(props);
+		// state in here this.state = {}
+	}
+	
 
-ReactDOM.render(
-	<NavBar title="Hot or Cold" links={links} />,
-	document.getElementById('root')
-);
-
+	render () {
+		const links = [{
+			text: 'What?',
+			href: '#'
+		}, {
+			text: '+New Game',
+			href: '#'
+		}];
+		return (<NavBar title="Hot or Cold" links={links} />)
+	}
 }
 
 
